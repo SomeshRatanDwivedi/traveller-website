@@ -21,6 +21,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Cars', path: '/cars' },
+    { name: 'Traffic', path: '/traffic' },
   ];
 
   if (user) {

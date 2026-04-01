@@ -57,4 +57,12 @@ export const bookingsAPI = {
   cancel: (id) => api.put(`/bookings/${id}/cancel`),
 };
 
+// Traffic API
+export const trafficAPI = {
+  searchLocation: (query) => api.get('/traffic/search', { params: { query, limit: 5 } }),
+  getRoute: (originLat, originLon, destLat, destLon) =>
+    api.get('/traffic/route', { params: { originLat, originLon, destLat, destLon } }),
+  getFlow: (lat, lon) => api.get('/traffic/flow', { params: { lat, lon } }),
+};
+
 export default api;
